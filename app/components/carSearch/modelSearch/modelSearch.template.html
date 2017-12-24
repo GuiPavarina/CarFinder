@@ -1,0 +1,15 @@
+<div ng-controller="ModelController" ui-view>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3" ng-repeat="model in models | filter:filter.input">
+                <md-card >
+                    <md-card-content>
+                        <h2 class="text-center">{{model.nome}}</h2>
+                    </md-card-content>
+                    <md-button >Info about this model</md-button>
+                    <!-- ui-sref="modelSearch({ id : {{model.codigo}} })" -->
+                </md-card>
+            </div>
+        </div>
+    </div>
+</div>

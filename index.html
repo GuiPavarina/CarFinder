@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="carFinder">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+
+    <!-- Libs -->
+
+        <!-- Jquery -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Popper -->
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+        <!-- AngularJS -->
+        <script src="node_modules/angular/angular.min.js"></script> 
+        <script src="node_modules/angular-aria/angular-aria.min.js"></script> 
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script> 
+        <script src="node_modules/angular-material/angular-material.min.js"></script>
+        <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+        <link rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css"> 
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- END Libs  -->
+    
+    <!-- Angular  -->
+    <script src="app/app.js"></script>
+
+    <!-- Navigation Bar -->
+    <script src="app/common/nav/nav.module.js"></script>
+    <script src="app/common/nav/nav.component.js"></script>
+    <script src="app/common/nav/nav.controller.js"></script>
+
+    <!-- Car Search -->
+    <script src="app/components/carSearch/carSearch.module.js"></script>
+    <script src="app/components/carSearch/carSearch.routes.js"></script>
+
+    <script src="app/components/carSearch/brandSearch/brandSearch.module.js"></script>
+    <script src="app/components/carSearch/brandSearch/brandSearch.component.js"></script>
+    <script src="app/components/carSearch/brandSearch/brandSearch.controller.js"></script>
+    <script src="app/components/carSearch/brandSearch/brandSearch.service.js"></script>
+
+    <script src="app/components/carSearch/modelSearch/modelSearch.module.js"></script>
+    <script src="app/components/carSearch/modelSearch/modelSearch.component.js"></script>
+    <script src="app/components/carSearch/modelSearch/modelSearch.controller.js"></script>
+    <script src="app/components/carSearch/modelSearch/modelSearch.service.js"></script>
+
+    <!-- Services -->
+    <script src="app/common/services/filterByInput.service.js"></script>
+
+    
+    
+</head>
+<body>
+    <nav-bar></nav-bar>
+    <car-search>
+        <ui-view></ui-view>
+    </car-search>
+</body>
+</html>

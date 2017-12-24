@@ -1,0 +1,23 @@
+{
+  "name": "carfinder",
+  "version": "1.0.0",
+  "description": "Angular app based on Fipe Table ( Brazil )",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Guilherme",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.12",
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.8",
+    "angular-aria": "^1.6.8",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.8",
+    "bootstrap": "^4.0.0-beta.2",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "popper.js": "1.12.3"
+  }
+}
