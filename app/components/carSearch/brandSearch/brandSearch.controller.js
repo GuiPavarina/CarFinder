@@ -1,7 +1,10 @@
-function CarController($scope,$state,brandService,filterByInput) {
+function CarController($rootScope, $scope,$state,brandService,filterByInput) {
 
-    // filterByInput = "";
     $scope.filter = filterByInput;
+
+    $scope.init = function () {
+        filterByInput.input = "";
+    };
 
     brandService.getBrands().then(function (response){
         $scope.brandNames = response.data;

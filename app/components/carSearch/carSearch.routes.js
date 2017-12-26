@@ -1,7 +1,5 @@
 angular
-    .module('carSearch',
-        ['ui.router','brandSearch','modelSearch']
-    )
+    .module('carSearch')
     .config(['$stateProvider', '$urlRouterProvider', 
         function($stateProvider, $urlRouterProvider){
             

@@ -1,5 +1,5 @@
 angular
-    .module('brandFilter', [])
+    .module('carFinder')
     .factory('filterByInput', function() {
         var filterBrand = {
             input: ''
