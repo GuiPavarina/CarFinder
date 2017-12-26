@@ -1,4 +1,4 @@
-<div ng-controller="CarController" ui-view>
+<div ng-controller="CarController" ng-init="init()" ui-view>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3" ng-repeat="brand in brands | filter:filter.input">
@@ -7,7 +7,7 @@
                     <md-card-content>
                         <h2 class="text-center">{{brand.name}}</h2>
                     </md-card-content>
-                    <md-button ui-sref="modelSearch({ id : {{brand.code}} })">Find Cars</md-button>
+                    <md-button ui-sref="modelSearch({ id : {{brand.code}} })" >Find Cars</md-button>
                 </md-card>
             </div>
         </div>

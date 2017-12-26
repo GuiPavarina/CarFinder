@@ -1,6 +1,6 @@
-function NavController($scope,filterByInput) {
+function NavController($rootScope, $scope,filterByInput) {
     $scope.filter = filterByInput;
-
+    
 }
 
 angular
