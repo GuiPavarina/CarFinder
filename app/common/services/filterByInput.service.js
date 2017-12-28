@@ -1,8 +1,9 @@
 angular
     .module('carFinder')
-    .factory('filterByInput', function() {
+    .factory('filterByInput', function () {
         var filterBrand = {
-            input: ''
+            input: '',
+            placeholder: ''
         };
         return filterBrand;
     });

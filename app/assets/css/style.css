@@ -4,3 +4,8 @@ body{
     height:auto !important; /* cross-browser */
     height: 100%; /* cross-browser */
 }
+
+#modalModelSearch {
+    min-height: 20%;
+    min-width: 25%;
+}

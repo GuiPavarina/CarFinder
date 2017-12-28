@@ -5,4 +5,4 @@ angular
     .component('brandSearch', {
         templateUrl: 'app/components/carSearch/brandSearch/brandSearch.template.html',
         controller: 'CarController'
-});
+    });
