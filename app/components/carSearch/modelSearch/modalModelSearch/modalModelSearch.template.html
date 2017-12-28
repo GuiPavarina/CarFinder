@@ -1,0 +1,29 @@
+<md-dialog id="modalModelSearch" aria-label="List dialog" ng-controller="ModalController">
+    <div class="md-toolbar-tools">
+        <h2>Select the model</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+            <md-icon md-svg-src="" aria-label="Close dialog">X</md-icon>
+        </md-button>
+    </div>
+    <div style="margin: auto; height:50%;">
+        <section layout="row" layout-align="center center">
+            <md-dialog-content>
+                <md-input-container>
+                    <label>Model Year</label>
+                    <md-select ng-model="modelSelected">
+                        <md-option ng-repeat="year in years" ng-value="year.codigo">
+                            {{year.nome}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </md-dialog-content>
+        </section>
+        <section layout="row" layout-align="start center">
+            <md-dialog-actions>
+                <md-button ng-click="cancel()" class="md-raised md-warn">Cancel</md-button>
+                <md-button ng-click="ok()" class="md-raised md-primary">Select</md-button>
+            </md-dialog-actions>
+        </section>
+    </div>
+</md-dialog>
