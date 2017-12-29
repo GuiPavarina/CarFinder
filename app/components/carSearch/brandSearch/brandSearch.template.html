@@ -1,7 +1,7 @@
-<div ng-controller="CarController" ng-init="init()" ui-view>
-    <div class="container-fluid">
+<div ng-controller="CarController" ng-init="init()" ui-view scroll>
+    <div ng-show="brands" class="container-fluid">
         <div class="row">
-            <div class="col-sm-3" ng-repeat="brand in brands | filter:filter.input">
+            <div class="col-sm-4 col-md-3" ng-repeat="brand in brands | filter:filter.input">
                 <md-card>
                     <img class="rounded mx-auto d-block" ng-src="{{brand.img}}" onerror="this.src='app/assets/img/error.png'" class="md-card-image"
                         style="height:128px;width:128px;">
@@ -11,6 +11,16 @@
                     <md-button ui-sref="modelSearch({ id : {{brand.code}} })">Find Cars</md-button>
                 </md-card>
             </div>
+        </div>
+    </div>
+    <div ng-show="!brands" layout="row" layout-sm="column" layout-align="space-around">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    </div>
+    <div ng-show="filterButton">
+        <div class="fixed-bottom d-flex justify-content-sm-center justify-content-xs-start">
+            <md-button class="md-fab md-primary" aria-label="Go to top" ng-click="goToTop()">
+                <md-icon md-svg-src="app/assets/icons/up_icon.svg"></md-icon>
+            </md-button>
         </div>
     </div>
 </div>

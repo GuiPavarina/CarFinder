@@ -1,7 +1,12 @@
-<div ng-controller="ModelController" ng-init="init()" ui-view>
-    <div class="container-fluid">
+<div ng-controller="ModelController" ng-init="init()" ui-view scroll>
+    <div ng-show="models" class="container-fluid">
         <div class="row">
-            <div class="col-sm-3" ng-repeat="model in models | filter:filter.input">
+            <div class="col-sm-12 float-left" style="z-index: 99">
+                <md-button class="md-fab md-primary" aria-label="Back to home" ui-sref="brandSearch({})">
+                    <md-icon md-svg-src="app/assets/icons/back_icon.svg"></md-icon>
+                </md-button>
+            </div>
+            <div class="col-sm-4 col-md-3" ng-repeat="model in models | filter:filter.input">
                 <md-card>
                     <md-card-content>
                         <h2 class="text-center">{{model.nome}}</h2>
@@ -9,6 +14,16 @@
                     <md-button ng-click="openDialog(model.codigo)">Info about this model</md-button>
                 </md-card>
             </div>
+        </div>
+    </div>
+    <div ng-show="!models" layout="row" layout-sm="column" layout-align="space-around">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    </div>
+    <div ng-show="filterButton">
+        <div class="fixed-bottom d-flex justify-content-sm-center justify-content-xs-start">
+            <md-button class="md-fab md-primary" aria-label="Go to top" ng-click="goToTop()">
+                <md-icon md-svg-src="app/assets/icons/up_icon.svg"></md-icon>
+            </md-button>
         </div>
     </div>
 </div>

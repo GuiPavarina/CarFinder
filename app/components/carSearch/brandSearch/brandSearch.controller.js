@@ -1,11 +1,15 @@
-function CarController($rootScope, $scope, $state, brandService, filterByInput) {
+function CarController($rootScope, $scope, $state, $window, brandService, filterByInput) {
 
     $scope.filter = filterByInput;
 
     $scope.init = function () {
         filterByInput.input = "";
-        filterByInput.placeholder = "Filter By Brand"
+        filterByInput.placeholder = "Filter By Brand";
     };
+
+    $scope.goToTop = function () {
+        $window.scrollTo(0,0);
+    }
 
     brandService.getBrands().then(function (response) {
         $scope.brandNames = response.data;

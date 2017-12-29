@@ -1,4 +1,4 @@
-function ModelController($mdDialog, $scope, $stateParams, $state, modelService, filterByInput) {
+function ModelController($window, $mdDialog, $scope, $stateParams, $state, modelService, filterByInput) {
 
     $scope.filter = filterByInput;
 
@@ -6,6 +6,10 @@ function ModelController($mdDialog, $scope, $stateParams, $state, modelService, 
         filterByInput.input = "";
         filterByInput.placeholder = "Filter By Model"
     };
+
+    $scope.goToTop = function () {
+        $window.scrollTo(0,0);
+    }
 
     var id = $stateParams.id;
     modelService.getModels(id).then(function (response) {

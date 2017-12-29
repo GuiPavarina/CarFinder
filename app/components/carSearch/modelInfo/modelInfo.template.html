@@ -1,8 +1,21 @@
 <div ng-controller="ModelInfoController">
-    <p>{{carInformation.Valor}}</p>
-    <p>{{carInformation.Marca}}</p>
-    <p>{{carInformation.Modelo}}</p>
-    <p>{{carInformation.AnoModelo}}</p>
-    <p>{{carInformation.Combustivel}}</p>
-    <p>{{carInformation.MesReferencia}}</p>
+    <div ng-show="carInformation" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 float-left">
+                <md-button class="md-fab md-primary" aria-label="Back to home" ui-sref="modelSearch({ id: {{brand}} })">
+                    <md-icon md-svg-src="app/assets/icons/back_icon.svg"></md-icon>
+                </md-button>
+            </div>
+        </div>
+        <p>{{carInformation.Valor}}</p>
+        <p>{{carInformation.Marca}}</p>
+        <p>{{carInformation.Modelo}}</p>
+        <p>{{carInformation.AnoModelo}}</p>
+        <p>{{carInformation.Combustivel}}</p>
+        <p>{{carInformation.MesReferencia}}</p>
+    </div>
+
+    <div ng-show="!carInformation" layout="row" layout-sm="column" layout-align="space-around">
+        <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    </div>
 </div>
