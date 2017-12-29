@@ -7,9 +7,10 @@ function ModelInfoController($scope,$stateParams, modelInfoService) {
 
     modelInfoService.getInfo(brand,model,year).then(function (response){
         $scope.carInformation = response.data;
+    },function (err){
+        $scope.error = true;
     });
 
-    
 }
 
 angular

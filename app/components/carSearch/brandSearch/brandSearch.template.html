@@ -19,8 +19,14 @@
     <div ng-show="filterButton">
         <div class="fixed-bottom d-flex justify-content-sm-center justify-content-xs-start">
             <md-button class="md-fab md-primary" aria-label="Go to top" ng-click="goToTop()">
+                <md-tooltip md-direction="top">Top</md-tooltip>
                 <md-icon md-svg-src="app/assets/icons/up_icon.svg"></md-icon>
             </md-button>
+        </div>
+    </div>
+    <div ng-show="error">
+        <div class="d-flex justify-content-sm-center">
+            <img src="app/assets/img/technical.png">
         </div>
     </div>
 </div>
