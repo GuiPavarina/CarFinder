@@ -5,6 +5,8 @@ function ModalController($scope, $mdDialog, modelService) {
 
     modelService.getYears(brand, code).then(function (response) {
         $scope.years = response.data;
+    },function (err) {
+        // to be implemented
     });
 
     $scope.cancel = function () {

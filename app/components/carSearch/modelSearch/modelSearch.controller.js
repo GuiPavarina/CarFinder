@@ -14,6 +14,8 @@ function ModelController($window, $mdDialog, $scope, $stateParams, $state, model
     var id = $stateParams.id;
     modelService.getModels(id).then(function (response) {
         $scope.models = response.data.modelos;
+    },function (err){
+        $scope.error = true;
     });
 
     $scope.openDialog = function (code) {

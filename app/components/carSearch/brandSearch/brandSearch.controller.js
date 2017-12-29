@@ -14,14 +14,18 @@ function CarController($rootScope, $scope, $state, $window, brandService, filter
     brandService.getBrands().then(function (response) {
         $scope.brandNames = response.data;
         elements();
+    },function (err){
+        $scope.error = true;
     });
 
     function elements() {
         var arr = [];
 
         for (var i = 0; i < $scope.brandNames.length; i++) {
-            var nameFormated = $scope.brandNames[i].nome.replace(/\s/g, '');
+            var nameFormated = $scope.brandNames[i].nome.replace(/\s/g, '').toLowerCase();
             nameFormated = "https://logo.clearbit.com/" + nameFormated + ".com";
+            // console.log(escape(nameFormated))
+            // nameFormated = 'app/assets/logos/' + escape(nameFormated) + '.png';
             arr.push({
                 name: $scope.brandNames[i].nome,
                 code: $scope.brandNames[i].codigo,
